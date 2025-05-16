@@ -1,21 +1,21 @@
 # EDA 레포트
 
-EDA(Exploratory Data Analysis, 탐색적 데이터 분석) 레포트는 데이터를 처음 접했을 때  
+EDA(Exploratory Data Analysis, 탐색적 데이터 분석) 레포트는 데이터를 처음 접했을 때
 **구조를 이해하고, 패턴을 발견하며, 문제점을 파악**하는 과정을 **체계적으로 문서화**하는 보고서입니다.
 
 ---
 
 ## 1. 프로젝트 개요
 
-- **분석 목적**:  
-  2015년과 2019년 세계 행복 보고서 데이터를 병합하여  
-  4년간 각 국가의 행복 점수 변화와 그에 영향을 준 주요 요인을 파악하고,  
+- **분석 목적**:
+  2015년과 2019년 세계 행복 보고서 데이터를 병합하여
+  4년간 각 국가의 행복 점수 변화와 그에 영향을 준 주요 요인을 파악하고,
   향후 예측 모델링 및 정책 방향 설정에 활용
 
-- **데이터 출처**:  
+- **데이터 출처**:
   Kaggle - World Happiness Report (2015.csv, 2019.csv)
 
-- **데이터 구성**:  
+- **데이터 구성**:
   총 149개 국가, 연도별 주요 지표 7개 (Score, GDP, Family, Health, Freedom, Corruption, Generosity)
 
 ---
@@ -31,6 +31,7 @@ EDA(Exploratory Data Analysis, 탐색적 데이터 분석) 레포트는 데이�
   - `Corruption_diff`: 부패 인식 변화량
   - `Generosity_diff`: 관대함 변화량
 
+![image](KangYungu/image/h1.png)
 ---
 
 ## 3. 기술 통계 요약
@@ -45,16 +46,20 @@ EDA(Exploratory Data Analysis, 탐색적 데이터 분석) 레포트는 데이�
 | Freedom_diff     | +0.01  | +0.01  | 0.09     | -0.32  | +0.26  |
 | Corruption_diff  | +0.00  | +0.00  | 0.06     | -0.16  | +0.23  |
 | Generosity_diff  | -0.01  | -0.01  | 0.04     | -0.17  | +0.11  |
+![image](KangYungu/image/h2.png)
+![image](KangYungu/image/h3.png)
 
 ---
 
 ## 4. 결측치 및 이상치 탐색
 
 - **결측치 없음**: 모든 주요 변수의 결측치는 0건
-- **이상치 확인**:  
-  - `Score_diff`, `GDP_diff`, `Health_diff` 등에서 박스플롯 기준 이상치 존재  
+- **이상치 확인**:
+  - `Score_diff`, `GDP_diff`, `Health_diff` 등에서 박스플롯 기준 이상치 존재
   - 예: 행복 점수가 +1 이상 증가하거나 -1 이상 감소한 국가 존재
 
+![image](KangYungu/image/h4.png)
+![image](KangYungu/image/h5.png)
 ---
 
 ## 5. 변수 간 관계 분석
@@ -72,6 +77,8 @@ EDA(Exploratory Data Analysis, 탐색적 데이터 분석) 레포트는 데이�
   - 경제력(GDP), 사회적 지지(Family), 부패 인식 개선(Corruption)은 행복도 상승과 양의 상관관계
   - Health는 의외로 음의 상관 → 단일 변수보다는 다변량 분석 필요
 
+![image](KangYungu/image/h6.png)
+![image](KangYungu/image/h7.png)
 ---
 
 ## 6. 파생 변수 및 전처리
@@ -88,6 +95,8 @@ EDA(Exploratory Data Analysis, 탐색적 데이터 분석) 레포트는 데이�
   - 등급별 주요 변수 비교 및 시각화
   - 분류 모델 학습 시 타겟 변수로 활용 가능
 
+![image](KangYungu/image/h8.png)
+![image](KangYungu/image/h9.png)
 ---
 
 ## 7. 요약 및 인사이트
@@ -97,3 +106,4 @@ EDA(Exploratory Data Analysis, 탐색적 데이터 분석) 레포트는 데이�
 - `Health`, `Generosity`는 변화량 기준에서 큰 영향 없음
 - 단일 연도 분석보다 **변화량 중심의 EDA가 원인 분석에 유리**
 - 예측 모델 설계 및 정책 수립 시 유의미한 참고자료로 활용 가능
+![image](KangYungu/image/h10.png)
