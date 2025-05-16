@@ -9,7 +9,7 @@ EDA(Exploratory Data Analysis, 탐색적 데이터 분석) 레포트는 데이�
 
 - **분석 목적**:
   2015년과 2019년 세계 행복 보고서 데이터를 병합하여
-  4년간 각 국가의 행복 점수 변화와 그에 영향을 준 주요 요인을 파악하고,
+  4년간 각 국가의 행복 점수(Score)의 4년간 변화와 그에 영향을 준 주요 요인을 파악하고,
   향후 예측 모델링 및 정책 방향 설정에 활용
 
 - **데이터 출처**:
@@ -27,11 +27,13 @@ EDA(Exploratory Data Analysis, 탐색적 데이터 분석) 레포트는 데이�
   - `Score_diff`: 행복 점수 변화량
   - `GDP_diff`: 1인당 GDP 변화량
   - `Health_diff`: 건강 수명 기대 변화량
+  - `Family_diff`: 사회적 지지 변화량
   - `Freedom_diff`: 삶의 자유도 변화량
   - `Corruption_diff`: 부패 인식 변화량
   - `Generosity_diff`: 관대함 변화량
 
 ![image](KangYungu/image/h1.png)
+![image](KangYungu/image/h13.png)
 ---
 
 ## 3. 기술 통계 요약
@@ -42,12 +44,15 @@ EDA(Exploratory Data Analysis, 탐색적 데이터 분석) 레포트는 데이�
 |------------------|--------|--------|----------|--------|--------|
 | Score_diff       | -0.07  | -0.06  | 0.40     | -1.79  | +1.19  |
 | GDP_diff         | +0.10  | +0.09  | 0.13     | -0.19  | +0.57  |
+| Family_diff      | +0.02  | +0.02  | 0.07     | -0.22  | +0.25  |
 | Health_diff      | -0.03  | -0.01  | 0.07     | -0.26  | +0.09  |
 | Freedom_diff     | +0.01  | +0.01  | 0.09     | -0.32  | +0.26  |
 | Corruption_diff  | +0.00  | +0.00  | 0.06     | -0.16  | +0.23  |
 | Generosity_diff  | -0.01  | -0.01  | 0.04     | -0.17  | +0.11  |
+
 ![image](KangYungu/image/h2.png)
 ![image](KangYungu/image/h3.png)
+![image](KangYungu/image/h11.png)
 
 ---
 
@@ -97,6 +102,7 @@ EDA(Exploratory Data Analysis, 탐색적 데이터 분석) 레포트는 데이�
 
 ![image](KangYungu/image/h8.png)
 ![image](KangYungu/image/h9.png)
+![image](KangYungu/image/h11.png)
 ---
 
 ## 7. 요약 및 인사이트
@@ -106,4 +112,4 @@ EDA(Exploratory Data Analysis, 탐색적 데이터 분석) 레포트는 데이�
 - `Health`, `Generosity`는 변화량 기준에서 큰 영향 없음
 - 단일 연도 분석보다 **변화량 중심의 EDA가 원인 분석에 유리**
 - 예측 모델 설계 및 정책 수립 시 유의미한 참고자료로 활용 가능
-![image](KangYungu/image/h10.png)
+![image](KangYungu/image/h12.png)
